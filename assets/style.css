@@ -3,11 +3,16 @@ body {
     font-size: 16px;
     line-height: 1;
   }
+
   title {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+  .textarea {
+    border-top: 2px solid black;
+  }
+
   textarea {
     background: transparent;
     border: none;
@@ -38,13 +43,13 @@ body {
   .row {
     white-space: pre-wrap;
     height: 80px;
-    border-top: 1px solid white;
   }
   
   .hour {
     background-color: #ffffff;
     color: #000000;
     border-top: 1px dashed #000000;
+    border-right: 2px solid red;
   }
   
   .past {
@@ -74,4 +79,3 @@ body {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
   }
-  
