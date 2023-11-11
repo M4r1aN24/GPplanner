@@ -1,8 +1,13 @@
 console.log("This is planner.js");
-var today = document.querySelector('#currentDay');
+var today = $("#currentDay");
 var blockContainer = document.querySelector('.container');
-
-today.textContent = dayjs();
+// this functions display's the current time.
+function displayTime() {
+    var todaysTime = dayjs().format('DD MMM YYYY [at] hh:mm:ss a');
+    today.text(todaysTime);
+}
+// this is where it ends, the call is at the bottom.
+  
 var startHour = "9 am";
 var endHour = "5 pm";
 
@@ -31,3 +36,9 @@ var endHour = "5 pm";
 //  As the current time approaches the next hour, trigger
 //  an alert/dialog/modal that will say what is upcoming
 // Nice to have: Some way to indicate a task has been completed (checkbox, button, etc.?)
+
+
+
+
+
+setInterval(displayTime, 500);
