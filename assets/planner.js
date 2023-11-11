@@ -1,6 +1,8 @@
 console.log("This is planner.js");
-var today = dayjs();
-// Figure out today's date, and put it at the top of the page
+var today = document.querySelector('#currentDay');
+var blockContainer = document.querySelector('.container');
+
+today.textContent = dayjs();
 var startHour = "9 am";
 var endHour = "5 pm";
 
