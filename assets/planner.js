@@ -11,7 +11,13 @@ function displayTime() {
 var startHour = "9 am";
 var endHour = "5 pm";
 
+
 // Figure out how to make a block for every hour from 9 am to 5 pm inclusive
+
+
+
+
+
 //   each block should allow for text entry (perhaps the block is an input element/textarea)
 //   based on hour of the day, 
 //      each block should be styled based on whether the
@@ -41,4 +47,4 @@ var endHour = "5 pm";
 
 
 
-setInterval(displayTime, 500);
+setInterval(displayTime);
