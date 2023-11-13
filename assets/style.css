@@ -22,6 +22,7 @@ body {
     padding: 10px;
     width: 100%;
     height: 100%;
+    outline: none;
   }
   
   header {
@@ -69,7 +70,7 @@ body {
     color: white;
   }
   
-  .saveBtn {
+  .saveBtnContainer {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;

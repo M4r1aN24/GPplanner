@@ -1,8 +1,7 @@
 console.log("This is planner.js");
-var buttons = $("#saveBtn");
-var userInput = $("p");
-var userValue = $("#textarea");
-var today = $("#currentDay");
+var button = $(".saveBtn");
+var userValue = $(".textarea");
+var today = $(".currentDay");
 var blockContainer = $(".container");
 // this functions display's the current time.
 function displayTime() {
@@ -12,22 +11,17 @@ function displayTime() {
 
 setInterval(displayTime);
 
-function input() {
+function userInput() {
+    var buttons = document.querySelectorAll(".saveBtn");
+    for(var button of buttons){
+        button.addEventListener('click', function() {
+            var content = button.parentElement.previousElementSibling
+            console.log(content);
+        })
+    }
  
 }
-
-
-var hours = [
-  "9 AM",
-  "10 AM",
-  "11 AM",
-  "12 PM",
-  "1 PM",
-  "2 PM",
-  "3 PM",
-  "4 PM",
-  "5 PM",
-];
+userInput()
 
 // Figure out how to make a block for every hour from 9 am to 5 pm inclusive
 
