@@ -52,11 +52,12 @@ body {
     background-color: #ffffff;
     color: #000000;
     border-top: 1px dashed #000000;
-    border-right: 2px solid red;
+    border-right: 3px solid red;
+    height: 100%;
   }
   
   .past {
-    background-color: #d3d3d3;
+    background-color: grey;
     color: white;
   }
   
@@ -76,6 +77,8 @@ body {
     border-bottom-right-radius: 15px;
     background-color: #06aed5;
     color: white;
+    height: 100%;
+    
   }
   
   .saveBtn i:hover {
