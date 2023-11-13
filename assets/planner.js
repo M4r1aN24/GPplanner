@@ -1,30 +1,43 @@
 console.log("This is planner.js");
 var buttons = $("#saveBtn");
-var inputArea = $('#textarea').text();
-
+var userInput = $("p");
+var userValue = $("#textarea");
 var today = $("#currentDay");
-var blockContainer = document.querySelector('.container');
+var blockContainer = $(".container");
 // this functions display's the current time.
 function displayTime() {
-    var todaysTime = dayjs().format('DD MMM YYYY [at] hh:mm:ss a');
-    today.text(todaysTime);
+  var todaysTime = dayjs().format("DD MMM YYYY [at] hh:mm:ss a");
+  today.text(todaysTime);
 }
-// this is where it ends, the call is at the bottom.
-  
-var hours = ["9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", "5 PM"];
 
+setInterval(displayTime);
+
+function input() {
+ 
+}
+
+
+var hours = [
+  "9 AM",
+  "10 AM",
+  "11 AM",
+  "12 PM",
+  "1 PM",
+  "2 PM",
+  "3 PM",
+  "4 PM",
+  "5 PM",
+];
 
 // Figure out how to make a block for every hour from 9 am to 5 pm inclusive
 
-
-
 //   each block should allow for text entry (perhaps the block is an input element/textarea)
-//   based on hour of the day, 
+//   based on hour of the day,
 //      each block should be styled based on whether the
 //          hour is in the past, present, or future
 //      any block in the past should be locked such that
 //          text cannot be edited (Nice to have)
-//     
+//
 //   each block should include an hour label
 //   each block should include a save button
 //      each save button should have a click handler that
@@ -37,14 +50,7 @@ var hours = ["9 AM", "10 AM", "11 AM", "12 PM", "1 PM", "2 PM", "3 PM", "4 PM", 
 //               localStorage.setItem("10 am", "pretend to work")
 //   each block should load stored tasks for the given hour from local storage
 
-
 // Nice to have: Include reminder functionality
 //  As the current time approaches the next hour, trigger
 //  an alert/dialog/modal that will say what is upcoming
 // Nice to have: Some way to indicate a task has been completed (checkbox, button, etc.?)
-
-
-
-
-
-setInterval(displayTime);
