@@ -1,9 +1,10 @@
 console.log("This is planner.js");
-var button = $(".saveBtn");
+// var button = $(".saveBtn");
 var userValue = $(".textarea");
 var today = $(".currentDay");
 var blockContainer = $(".container");
 // this functions display's the current time.
+
 function displayTime() {
   var todaysTime = dayjs().format("DD MMM YYYY [at] hh:mm:ss a");
   today.text(todaysTime);
@@ -13,13 +14,21 @@ setInterval(displayTime);
 
 function userInput() {
     var buttons = document.querySelectorAll(".saveBtn");
-    for(var button of buttons){
+    var contextTextArea = document.querySelectorAll(".textarea");
+    for(const button of buttons){
         button.addEventListener('click', function() {
-            var content = button.parentElement.previousElementSibling
-            console.log(content);
+            var content = button.parentElement.previousElementSibling.value;
+            var key = button.parentElement.parentElement.id;
+            localStorage.setItem(key, content);
+
         })
     }
- 
+    for(const textArea of contextTextArea){
+        let key = textArea.parentElement.id;
+        textArea.value = localStorage.getItem(key);
+    }
+
+    
 }
 userInput()
 
