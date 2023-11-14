@@ -14,8 +14,8 @@ setInterval(displayTime);
 
 function userInput() {
     var now = dayjs().format("HH");
-    var buttons = document.querySelectorAll(".saveBtn");
-    var contextTextArea = document.querySelectorAll(".textarea");
+    var buttons = $(".saveBtn");
+    var contextTextArea = $(".textarea");
     for(const button of buttons){
         button.addEventListener('click', function() {
             var content = button.parentElement.previousElementSibling.value;
