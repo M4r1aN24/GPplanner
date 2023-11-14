@@ -8,9 +8,20 @@ var hours = $(".hour");
 function displayTime() {
   var todaysTime = dayjs().format("DD MMM YYYY [at] HH:mm:ss a");
   today.text(todaysTime);
+
+  
 }
 
 setInterval(displayTime);
+
+
+// function displayHours(){
+//     var hour = $("<p>");
+//     hour.text(dayjs('09')).format("hh");
+//     hours.append(hours);
+//  }
+// displayHours();
+
 
 function userInput() {
     var now = dayjs().format("HH");
