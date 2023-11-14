@@ -3,9 +3,10 @@ console.log("This is planner.js");
 var userValue = $(".textarea");
 var today = $("#currentDay");
 var blockContainer = $(".container");
+var hours = $(".hour");
 
 function displayTime() {
-  var todaysTime = dayjs().format("DD MMM YYYY [at] hh:mm:ss a");
+  var todaysTime = dayjs().format("DD MMM YYYY [at] HH:mm:ss a");
   today.text(todaysTime);
 }
 
