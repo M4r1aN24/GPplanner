@@ -14,6 +14,35 @@ function displayTime() {
 
 setInterval(displayTime);
 
+// var hourSlot= [
+//     '9 AM',
+//     '10 AM',
+//     '11 AM',
+//     '12 PM',
+//     '1 PM',
+//     '2 PM',
+//     '3 PM',
+//     '4 PM',
+//     '5 PM'
+//   ];
+  
+//   for (var i = 0; i < hourSlot.length; i++) {
+//     // Create a new `<div>` for each ability and its text content
+//     var hourSlotText = $('<p>');
+  
+//     // hourSlotText.textContent = hourSlot[i];
+//     hourSlotText.text(hourSlot[i]);
+  
+//     // `my-3` class adds margin on top and bottom
+//     hourSlotText.addClass('my-3');
+  
+//     // Alternatively
+//     // var hourSlotText = $("<div>" + hourSlot[i] + "</div>");
+  
+//     // Add this new `<div>` to the hourSlot `<div>` container element.
+//     hours.append(hourSlotText);
+//   }
+
 
 // function displayHours(){
 //     var hour = $("<p>");
@@ -21,7 +50,6 @@ setInterval(displayTime);
 //     hours.append(hours);
 //  }
 // displayHours();
-
 
 function userInput() {
     var now = dayjs().format("HH");
@@ -32,10 +60,8 @@ function userInput() {
             var content = button.parentElement.previousElementSibling.value;
             var key = button.parentElement.parentElement.id;
             localStorage.setItem(key, content);
-
         })
     }
-
     for(const textArea of contextTextArea){
         
         let key = textArea.parentElement.id;
@@ -47,7 +73,6 @@ function userInput() {
        } else {
         textArea.classList.add('present');
        }
-       
     }
 }
 userInput()
